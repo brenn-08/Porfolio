@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutParagraph = document.querySelector('.about-me p');
     const projectCards = document.querySelectorAll('.project');
     const contactContainers = document.querySelectorAll('.contact-container, .contact-info, .contact-form');
-    const educBg = document.querySelectorAll('.educ-bg');
+    const educBg = document.querySelectorAll('.educ-bg, .educ-bg h4, .educ-bg .degree, .educ-bg .year');
 
     const hamburger = document.getElementById('hamburger');
     const navLinksContainer = document.getElementById('nav-links');
@@ -16,15 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (toggle) {
         toggle.addEventListener('change', () => {
             if (toggle.checked) {
-                // Add dark-mode class to nav to fix hover
+                
                 if(nav) nav.classList.add('dark-mode');
                 document.body.classList.add('dark-mode');
 
                 document.body.style.backgroundColor = '#121212';
                 document.body.style.color = '#e0e0e0';
                 if (nav) nav.style.backgroundColor = '#1a1a1a';
-                // REMOVE inline styles for links so hover works
-                // navLinks.forEach(link => link.style.color = '#e0e0e0');
                 
                 if (nameTitleH1) nameTitleH1.style.color = '#e0e0e0';
                 if (nameTitleH2) nameTitleH2.style.color = '#cccccc';
@@ -36,20 +34,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 contactContainers.forEach(cont => cont.style.color = '#e0e0e0');
                 educBg.forEach(bg => bg.style.backgroundColor = '#1a1a1a');
                 educBg.forEach(bg => bg.style.color = '#e0e0e0');
+                document.querySelectorAll('.desc').forEach(p => p.style.color = '#ddd');
+                document.querySelectorAll('#experience li').forEach(li => li.style.color = '#ddd');
 
                 if (navLinksContainer) navLinksContainer.style.backgroundColor = '#1a1a1a';
                 if (hamburger) hamburger.style.backgroundColor = '#1a1a1a';
                 if (hamburger) hamburger.querySelectorAll('span').forEach(span => span.style.backgroundColor = '#e0e0e0');
             } else {
-                // Remove dark-mode class to fix hover
+                
                 if(nav) nav.classList.remove('dark-mode');
                 document.body.classList.remove('dark-mode');
 
                 document.body.style.backgroundColor = '#ffffff';
                 document.body.style.color = '#222222';
                 if (nav) nav.style.backgroundColor = '#ffffff';
-                // REMOVE inline styles for links so hover works
-                // navLinks.forEach(link => link.style.color = '#222222');
                 
                 if (nameTitleH1) nameTitleH1.style.color = '#222222';
                 if (nameTitleH2) nameTitleH2.style.color = '#555555';
@@ -61,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 contactContainers.forEach(cont => cont.style.color = '#222222');
                 educBg.forEach(bg => bg.style.backgroundColor = '#ffffff');
                 educBg.forEach(bg => bg.style.color = '#222222');
+                document.querySelectorAll('.desc').forEach(p => p.style.color = '#666');
+                document.querySelectorAll('#experience li').forEach(li => li.style.color = '#333');
 
                 if (navLinksContainer) navLinksContainer.style.backgroundColor = '#ffffff';
                 if (hamburger) hamburger.style.backgroundColor = 'transparent';

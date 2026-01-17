@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    padding: 40px 20px;
+    padding: 120px 20px;
 }
 
 .nav {
@@ -47,7 +47,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: #1764AC; 
+    color: #ac8417; 
 }
 
 .nav.dark-mode a {
@@ -55,7 +55,7 @@ header {
 }
 
 .nav.dark-mode a:hover {
-    color: #1e64f1; 
+    color: #ac8417; 
 }
 
 .profile-about-container {
@@ -178,6 +178,7 @@ h3 {
     letter-spacing: 0.2rem;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    margin-top: 4rem;
 }
 
 p, li {
@@ -190,19 +191,58 @@ section {
 }
 
 #experience, #skills {
-    background-color: #ffffff;
     padding-top: 6vw;
     padding-bottom: 6vw;
+}
+
+.experience p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.experience ul {
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; 
+}
+
+.experience li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.skill {
+    display: flex;
+    align-items: center;   
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    flex-wrap: nowrap;       
+}
+
+.skill:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
 }
 
 #skills p {
     margin-bottom: 2vh;
 }
 
+.skill-name {
+    font-weight: 600;
+    min-width: 160px;       
+}
+
 #graph {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1vw;
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem;              
     margin-top: 2rem;
 }
 
@@ -211,17 +251,36 @@ section {
 }
 
 .stars {
-    margin-left: 2vw;
+    font-size: 1.2rem;
+    color: #f5c518;
+    min-width: 90px;      
+    text-align: left; 
 }
 
 .description {
     color: gray;
     font-size: 0.8rem;
     margin-left: 2vw;
+    flex: 1; 
 }
+
+body.dark-mode #graph .skill {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode #graph .skill p,
+body.dark-mode #graph .description {
+    color: #e0e0e0;
+}
+
+body.dark-mode #graph .stars {
+    color: #d4af37; 
+}
+
 
 .educ-timeline {
     padding-top: 2vw;
+    padding-left: 3vw;
     border-left: 0.2rem solid #cfcbcb;
 }
 
@@ -232,6 +291,7 @@ section {
     width: 90%;
     border-left: 0.5rem solid #283758;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .educ-bg h4 {
@@ -240,8 +300,9 @@ section {
     font-family: century gothic;
 }
 
+
 .educ-timeline .desc {
-    margin-left: 8vw;
+    margin-left: 2vw;
     margin-right: 1.5vw;
     font-size: 1rem;
     margin-top: 2vw;
@@ -253,6 +314,7 @@ section {
     font-style: italic;
     color: #333;
     font-size: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .year {
@@ -467,6 +529,10 @@ section {
         padding-bottom: 30px;
     }
 
+    header {
+        padding: 2px 20px;
+    }
+
     .about-me-header {
         justify-content: center;
         gap: 10px;
@@ -478,6 +544,12 @@ section {
 
     section {
         padding: 5vw 5vw;
+    }
+
+    .educ-timeline {
+        padding-top: 2vw;
+        padding-left: 8vw;
+        border-left: 0.2rem solid #cfcbcb;
     }
 
     #graph {
@@ -493,4 +565,5 @@ section {
     .nav {
         gap: 60px;
     }
+
 }
