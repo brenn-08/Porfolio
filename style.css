@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -46,16 +47,15 @@ header {
 }
 
 .nav-links a:hover {
-    color: #1764AC; /* hover color in light mode */
+    color: #1764AC; 
 }
 
-/* Dark mode nav links */
 .nav.dark-mode a {
-    color: #e0e0e0; /* link color in dark mode */
+    color: #e0e0e0; 
 }
 
 .nav.dark-mode a:hover {
-    color: #1e64f1; /* hover color in dark mode */
+    color: #1e64f1; 
 }
 
 .profile-about-container {
